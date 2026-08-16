@@ -9,7 +9,7 @@ const helloUserGet = (request, res) => (async () =>{
 } )();
 
 const helloUserPost = (request, res) => (async () =>{
-    const username = request.params.nome
+    const { username } = request.body
     res.json({ status: "ok", "nomeusuario": username });
 } )();
 

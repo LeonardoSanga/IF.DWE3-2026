@@ -1,0 +1,42 @@
+# arquivo: tests/tests.rest
+# teste de API /
+POST http://localhost:40000/somar HTTP/1.1
+content-type: application/json
+
+{
+"num1": 4,
+"num2": 2
+}
+
+###
+
+# teste de API subtrair
+POST http://localhost:40000/subtrair HTTP/1.1
+content-type: application/json
+
+{
+"num1": 4,
+"num2": 2
+}
+
+###
+
+# teste de API multiplicar
+POST http://localhost:40000/multiplicar HTTP/1.1
+content-type: application/json
+
+{
+"num1": 4,
+"num2": 2
+}
+
+###
+
+# teste de API dividir
+POST http://localhost:40000/dividir HTTP/1.1
+content-type: application/json
+
+{
+"num1": 4,
+"num2": 2
+}
