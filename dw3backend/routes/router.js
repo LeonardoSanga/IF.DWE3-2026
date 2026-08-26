@@ -1,5 +1,7 @@
 const express = require("express");
 const routerApp = express.Router();
+
+const appAlunos = require("../apps/alunos/controller/ctlAlunos");
 const appLogin = require("../apps/login/controller/ctlLogin");
 
 // middleware that is specific to this router
@@ -11,6 +13,12 @@ routerApp.get("/", (req, res) => {
 });
 
 //Rotas de Alunos
+routerApp.get("/getAllAlunos", appAlunos.GetAllAlunos);
+routerApp.get("/getAlunoByID/:alunoid", appLogin.AutenticaJWT, appAlunos.GetAlunoByID);
+routerApp.post("/insertAluno", appLogin.AutenticaJWT, appAlunos.InsertAluno);
+routerApp.put("/updateAluno/:alunoid", appLogin.AutenticaJWT, appAlunos.UpdateAluno);
+routerApp.delete("/deleteAluno/:alunoid", appLogin.AutenticaJWT, appAlunos.DeleteAluno);
+
 //Rotas de Cursos
 // Rota Login
 routerApp.post("/Login", appLogin.Login);
