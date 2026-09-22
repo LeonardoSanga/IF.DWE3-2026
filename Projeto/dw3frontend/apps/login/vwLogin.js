@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Limpa o Cookie Islogged
-  //dw3ClearIsLoggedCookie();
+  dw3ClearIsLoggedCookie();
 
   var form = document.getElementById('loginForm');
   var errorBox = document.getElementById('loginError');
